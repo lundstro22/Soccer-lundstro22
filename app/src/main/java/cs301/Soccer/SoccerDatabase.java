@@ -31,6 +31,7 @@ public class SoccerDatabase implements SoccerDB {
         }else{
             SoccerPlayer player = new SoccerPlayer(firstName, lastName, 3, teamName);
             players.put(fullName(firstName, lastName),player);
+            return true;
         }
     }
 
