@@ -81,7 +81,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpGoals(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpGoals();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -91,7 +97,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpAssists(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpAssists();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -101,7 +113,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpShots(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpShots();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -111,7 +129,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpSaves(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpSaves();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -121,7 +145,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpFouls(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpFouls();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -131,7 +161,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpYellowCards(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpYellowCards();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -141,7 +177,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean bumpRedCards(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))) {
+            players.get(fullName(firstName, lastName)).bumpRedCards();
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
