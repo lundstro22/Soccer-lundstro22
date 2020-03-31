@@ -60,7 +60,13 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public SoccerPlayer getPlayer(String firstName, String lastName) {
-        return null;
+        String name= fullName(firstName, lastName);
+        if(players.containsKey(name)){
+            return players.get(name);
+        }
+        else{
+            return null;
+        }
     }
 
     /**
