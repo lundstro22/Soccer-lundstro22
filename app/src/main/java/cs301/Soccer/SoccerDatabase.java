@@ -21,12 +21,27 @@ public class SoccerDatabase implements SoccerDB {
      *
      * @see SoccerDB#addPlayer(String, String, int, String)
      */
+
+    HashMap<String, SoccerPlayer> players = new HashMap<String, SoccerPlayer>();
     @Override
     public boolean addPlayer(String firstName, String lastName,
                              int uniformNumber, String teamName) {
-        return false;
+        if(players.containsKey(fullName(firstName,lastName))){
+            return false;
+        }else{
+            SoccerPlayer player = new SoccerPlayer(firstName, lastName, 3, teamName);
+            players.put(fullName(firstName, lastName),player);
+        }
     }
 
+
+    /*
+     *get full name
+     */
+    public String fullName(String first, String last){
+
+        return first + " # " + last;
+    }
     /**
      * remove a player
      *
