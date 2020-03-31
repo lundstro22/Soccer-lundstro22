@@ -50,7 +50,12 @@ public class SoccerDatabase implements SoccerDB {
      */
     @Override
     public boolean removePlayer(String firstName, String lastName) {
-        return false;
+        if(players.containsKey(fullName(firstName, lastName))){
+          players.remove(fullName(firstName, lastName));
+          return true;
+        }else{
+            return false;
+        }
     }
 
     /**
