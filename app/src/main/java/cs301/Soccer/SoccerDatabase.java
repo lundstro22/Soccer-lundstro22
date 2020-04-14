@@ -221,8 +221,12 @@ public class SoccerDatabase implements SoccerDB {
         Object[] teamList= new Object[numPlayers(null)];
         int n=0;
         if(teamName == null){
-            SoccerPlayer player = (SoccerPlayer) playerList[idx];
-            return player;
+            if(idx < numPlayers(null)) {
+                SoccerPlayer player = (SoccerPlayer) playerList[idx];
+                return player;
+            }else{
+                return null;
+            }
         }
         for (Object playerObject : playerList) {
             SoccerPlayer player = (SoccerPlayer) playerObject;
