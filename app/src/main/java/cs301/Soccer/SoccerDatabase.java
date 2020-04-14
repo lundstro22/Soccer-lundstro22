@@ -218,7 +218,7 @@ public class SoccerDatabase implements SoccerDB {
     @Override
     public SoccerPlayer playerNum(int idx, String teamName) {
         Object[] playerList = players.values().toArray();
-        Object[] teamList= new Object[50];
+        Object[] teamList= new Object[numPlayers(null)];
         int n=0;
         if(teamName == null){
             SoccerPlayer player = (SoccerPlayer) playerList[idx];
@@ -227,7 +227,7 @@ public class SoccerDatabase implements SoccerDB {
         for (Object playerObject : playerList) {
             SoccerPlayer player = (SoccerPlayer) playerObject;
             if(player.getTeamName().equals(teamName)){
-                teamList[0]= player;
+                teamList[n]= player;
                 n++;
             }
         }

@@ -604,7 +604,7 @@ public class MainActivity extends Activity {
 
             // If the spinner selection is different than the team being iterated,
             // flash and return
-            if (teamName != null && !teamName.equals(currentIteratorTeam)) {
+            if(teamName != null && !teamName.equals(currentIteratorTeam)) {
                 flash();
                 return;
             }
