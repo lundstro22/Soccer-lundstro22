@@ -230,9 +230,13 @@ public class SoccerDatabase implements SoccerDB {
                 teamList[n]= player;
                 n++;
             }
+        }if(idx < numPlayers(teamName)) {
+            SoccerPlayer p = (SoccerPlayer) teamList[idx];
+            return p;
         }
-        SoccerPlayer p = (SoccerPlayer) teamList[idx];
-        return p;
+        else{
+            return null;
+        }
     }
 
     /**
